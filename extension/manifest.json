@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Excalidraw Library Search",
+    "version": "1.0",
+    "description": "Adds a search bar to the Excalidraw library for searching the library.",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://excalidraw.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://excalidraw.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
